@@ -1,9 +1,17 @@
+import { useState } from "react";
+import { Sidebar } from "./components/Sidebar/Sidebar";
+
 function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const onSidebarOpen = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
-  <div className="App">
-    Hello world
-    <div>Hello from Abdulaziz's feature/home branch</div>
-  </div>
+    <div className="App">
+      <Sidebar sidebarOpen={sidebarOpen} onSidebarOpen={onSidebarOpen} />
+    </div>
   );
 }
 

@@ -1,0 +1,49 @@
+.sidebar-container {
+  width: 20%;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  transition: 0.3s all ease;
+  border-right: 1px solid #ccc;
+
+  .menu-btn {
+    transition: 0.4s all ease;
+    cursor: pointer;
+    padding: 24px;
+    font-size: 24px;
+  }
+
+  .profile-info {
+    transition: 0.3s all ease;
+    &-hidden {
+      visibility: hidden;
+    }
+    &-visible {
+      margin: 0 auto;
+      padding: 24px;
+    }
+  }
+
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+
+    button {
+      padding: 24px;
+      padding-right: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      i {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &.close {
+    width: 4%;
+  }
+}
